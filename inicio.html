@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site pessoal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="">
+</head>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: monospace;
+        background: linear-gradient(45deg, #000, #333);
+        color: white;
+        height: 100vh;
+    }
+    .container {
+        display: flex;
+        height: 100vh;
+    }
+    .left-content {
+        flex: 1;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .cabecalho {
+        font-size: 16px;
+    }
+    .right-content {
+        flex: 1;
+        background: url('/api/placeholder/600/800') no-repeat center center;
+        background-size: cover;
+        position: relative;
+    }
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(45deg, rgba(0,0,255,0.3), rgba(255,0,255,0.3));
+    }
+    .overlay img {
+        height: 100%;
+        width: 60%;
+    }
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+    .logo {
+        background-color: #00a0ff;
+        color: black;
+        padding: 0.5rem 1rem;
+        font-weight: bold;
+    }
+    nav ul {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+    }
+    nav ul li {
+        margin-left: 1rem;
+    }
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+    nav ul li a:hover {
+        text-decoration: underline;
+    }
+    nav ul li:last-child {
+        color: #00a0ff;
+    }
+    .content h1 {
+        font-size: 4rem;
+        margin-bottom: 0;
+    }
+    .content h2 {
+        background-color: #00a0ff;
+        color: black;
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        margin-top: 0.5rem;
+    }
+    .content p {
+        max-width: 80%;
+    }
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .portfolio-btn {
+        background-color: #00a0ff;
+        color: black;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    
+</style>
+<body>
+    <header>
+        <div class="container">
+            <div class="left-content">
+                <nav class="cabecalho">
+                    <div class="logo">INÍCIO</div>
+                    <ul>
+                        <li>
+                            <a href="./sobre.html">SOBRE</a>
+                        </li>
+                        <li>
+                            <a href="./experiencia">EXPERIÊNCIA</a>
+                        </li>
+                        <li>
+                            <a href="./projetos">PROJETOS</a>
+                        </li>
+                        <li>
+                            <a href="./contatos">CONTATOS</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="content">
+                    <p>Olá !</p>
+                    <h1>Eu sou Sérgio Saraiva</h1>
+                    <h2>DESENVOLVEDOR FRONT END</h2>
+                    <p>Tecnólogo em Redes de Computadores. Bacharel em Engenharia de Sowftware e Engenheiro Front End.</p>
+                </div>
+                <div class="footer">
+                    <a href="#" class="portfolio-btn">PORTOFÓLIO 2024</a>
+                    <div><!-- Placeholder for potential additional footer content --></div>
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="overlay">
+                    <img src="/images/myimagshadw.png" alt="minha foto">
+                </div>
+            </div>
+        </div>
+            </div>
+        </div>
+    </header>
+</body>
+</html>
