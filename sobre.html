@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
     <header>
@@ -18,6 +19,9 @@
                     <ul>
                         <li>
                             <a href="./inicio.html">INÍCIO</a>
+                        </li>
+                        <li>
+                            <a href="./formacao.html">FORMAÇÃO</a>
                         </li>
                         <li>
                             <a href="./experiencia.html">EXPERIÊNCIA</a>
@@ -31,24 +35,85 @@
                     </ul>
                 </nav>
                 <div class="content">
-                    <p>Olá !</p>
-                    <h1>Eu sou Sérgio Saraiva</h1>
+                    <!-- <p>Olá !</p> -->
+                    <!-- <h1>Eu sou Sérgio Saraiva</h1>
+                    <h2>DESENVOLVEDOR FRONT END</h2> -->
+                    <p><span class="typing" id="intro"></span></p>
+                    <p><span class="typing" id="techJourney"></span></p>
+                    <p><span class="typing" id="family"></span></p>
                     <h2>DESENVOLVEDOR FRONT END</h2>
-                    <p>Tecnólogo em Redes de Computadores. Bacharel em Engenharia de Sowftware e Engenheiro Front End.</p>
                 </div>
-                <footer>
+                <footer class="animate__animated animate__pulse animate__infinite">
                     <a href="#" class="portfolio-btn">PORTOFÓLIO 2024</a>
                     <div><!-- Placeholder for potential additional footer content --></div>
                 </footer>
             </div>
             <div class="right-content">
-                <div class="overlay">
-                    <img src="/images/myimagshadw.png" alt="minha foto">
-                </div>
+                <!-- <div class="overlay">
+                    <img src="/images/myimg.png" alt="minha foto">
+                </div> -->
             </div>
         </div>
             </div>
         </div>
     </header>
+
+    <script>
+        function typeText(elementId, text, speed, sound) {
+            let index = 0;
+            const element = document.getElementById(elementId);
+            const audio = new Audio(sound); // Carrega o som de digitação
+
+            // Toca o som de forma contínua
+            audio.loop = true; // Ativa o loop para o som tocar continuamente
+            audio.play().catch((error) => {
+                console.error("Erro ao reproduzir o som:", error);
+            });
+
+            function type() {
+                if (index < text.length) {
+                    element.innerHTML += text.charAt(index);
+                    index++;
+                    setTimeout(type, speed); // Continua a digitar
+                } else {
+                    // Para o som quando a digitação terminar
+                    audio.pause();
+                    audio.currentTime = 0;
+                }
+            }
+
+            type(); // Inicia a função de digitação
+        }
+
+        // Inicia a digitação ao carregar a página
+        window.onload = function() {
+             // Transição suave para a imagem de fundo
+            const rightContent = document.querySelector(".right-content");
+            rightContent.classList.add("loaded"); // Adiciona a classe 'loaded' ao carregar a página
+            
+            // Muda a imagem de fundo após 20 segundos
+            setTimeout(function() {
+                rightContent.style.background = "url('/images/familia.png') no-repeat center center";
+                rightContent.style.backgroundSize = "auto";
+            }, 21000); // 20000 milissegundos = 20 segundos
+
+            typeText("intro", "Olá !", 60, "sounds/type-sound.mp3");
+            
+            setTimeout(function() {
+                typeText("techJourney", "Sou um apaixonado por tecnologia. Iniciei minha jornada em 2011 na área de telecomunicações. Passando desde a operação até a área de gestão.", 60, "sounds/type-sound.mp3");
+            }, 1000); // Aguarda 2 segundos para iniciar o próximo parágrafo
+
+            setTimeout(function() {
+                typeText("family", "Agora, após 13 anos na área de telecom e redes, embarco nessa jornada de aprendizado em desenvolvimento Front End, evoluindo com cada etapa de estudo.\nMas, antes de tudo isso, amo minha família. Sou pai da Stellinha e esposo da Simei.", 60, "sounds/type-sound.mp3");
+            }, 10000); // Aguarda mais tempo para iniciar o terceiro parágrafo
+            
+            // Transição suave para a imagem
+            const img = document.querySelector(".overlay img");
+            img.onload = function() {
+            img.classList.add("loaded"); // Adiciona a classe 'loaded' quando a imagem carregar
+            // Texto a ser digitado nos parágrafos com o som de digitação
+            }
+        }
+    </script>
 </body>
 </html>
