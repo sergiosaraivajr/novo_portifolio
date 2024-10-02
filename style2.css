@@ -5,13 +5,53 @@ body, html {
     background: linear-gradient(to right, #000000, #434343);
     color: white;
     height: 100vh;
-    overflow: hidden
+    overflow: hidden;
+    list-style-type: none;
 }
 
 .container {
     display: flex ;
     height: 100vh;
 }
+
+.cont {
+    display: flex;
+    justify-content: center;
+}
+
+.container-formacao,
+.container-education,
+.container-experiencia,
+.container-experience {
+    display: flex ;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.container-education,
+.container-experience {
+    height: 100vh;
+}
+
+.container-education img,
+.container-experience img {
+    display: flexbox;
+    width: 30px;
+    margin-right: 8px;
+}
+
+#img-experience {
+    width: 80px;
+}
+
+.left-education,
+.right-education,
+.left-experience,
+.right-experience {
+    width: 50%;
+    align-items: center;
+}
+
 .left-content {
     flex: 1;
     padding: 2rem;
@@ -19,9 +59,28 @@ body, html {
     flex-direction: column;
     justify-content: space-between;
 }
+
+.list-academic li,
+.list-experience li {
+    list-style-type: none;
+    padding: 16px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
 .cabecalho {
     font-size: 16px;
 }
+
+.cabecalho-formacao,
+.cabecalho-experiencia {
+    margin: 32px;
+    width: 100%;
+}
+
 .right-content {
     justify-content: right;
     flex: 1;
@@ -32,6 +91,7 @@ body, html {
     transition: opacity 2s ease, background 2s ease; /* Transição suave */
     /* position: relative; */
 }
+
 /* Quando a página é carregada, a imagem de fundo aparece suavemente */
 .right-content.loaded {
     opacity: 1; /* Define a opacidade como 1 para aparecer */
@@ -52,6 +112,7 @@ nav {
     color: black;
     padding: 0.5rem 1rem;
     font-weight: bold;
+    font-size: 18px;
 }
 nav ul {
     display: flex;
@@ -59,13 +120,14 @@ nav ul {
     padding: 0;
 }
 nav ul li {
-    margin-left: 1rem;
+    margin-left: 4rem;
 }
 /* Estilo básico do link */
 a {
     position: relative;
     color: #fff;
     text-decoration: none; /* Sem sublinhado padrão */
+    font-size: 18px;
 }
 
 /* Adiciona o pseudo-elemento ::after para a linha , cria o efeito da crescimento*/
@@ -102,14 +164,15 @@ nav ul li:last-child {
 }
 
 #bg3 {
-    background: #304352;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #304352, #d7d2cc);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right,#304352, #d7d2cc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0F2027, #203A43, #2C5364);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0F2027, #203A43, #2C5364); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .background-buttons {
-    margin-top: 32px;
     margin-right: 16px;
+    margin-left: 16px;
     max-height: 56px;
     text-align: center;
 }
@@ -179,7 +242,7 @@ footer {
 }
 
 /* Estilo para os ícones das tecnologias */
-.row img {
+.row-inicio img {
     padding: 16px;
     width: 60px;
     height: 60px;
