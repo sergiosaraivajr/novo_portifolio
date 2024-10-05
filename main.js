@@ -25,9 +25,16 @@ function typeText(elementId, text, speed, sound) {
     }
 
 window.onload = function() {
+    // Transição suave para a imagem de fundo
+    const rightContent = document.querySelector(".right-content");
+    rightContent.classList.add("loaded"); // Adiciona a classe 'loaded' ao carregar a página
     // Adiciona o som de digitação e chama a função
-    typeText("hello", "Olá!", 150, "sounds/type-sound.mp3"); // Som de digitação para "Olá!"
+    typeText("hello", "Olá! Seja bem-vindo(a)!", 150, "/sounds/type-sound.mp3"); // Som de digitação para "Olá!"
     setTimeout(function() {
-        typeText("name", "Eu sou Sérgio Saraiva", 150, "sounds/type-sound.mp3"); // Som de digitação para "Eu sou Sérgio Saraiva"
-    }, 1000); // Aguarda 1 segundo para iniciar o próximo texto
+        typeText("name", "Me chamo Sérgio Saraiva", 150, "/sounds/type-sound.mp3"); // Som de digitação para "Eu sou Sérgio Saraiva"
+    }, 3500); // Aguarda 1 segundo para iniciar o próximo texto
+    setTimeout(function() {
+        typeText("function", "DESENVOLVEDOR FRONT END", 150, "/sounds/type-sound.mp3"); // Som de digitação para "Eu sou Sérgio Saraiva"
+    }, 7500); // Aguarda 1 segundo para iniciar o próximo texto
 };
+
