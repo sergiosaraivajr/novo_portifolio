@@ -8,5 +8,5 @@ document.getElementById('bg2').addEventListener('click', function() {
 });
 
 document.getElementById('bg3').addEventListener('click', function() {
-    document.body.style.background = 'linear-gradient(to right, #304352, #d7d2cc)';
+    document.body.style.background = 'linear-gradient(to right, #0f2027, #203a43, #2c5364)';
 });

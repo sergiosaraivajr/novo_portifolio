@@ -8,50 +8,61 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="left-content">
-                <nav class="cabecalho">
-                    <div class="logo">PROJETOS</div>
-                    <ul>
-                        <li>
-                            <a href="./inicio.html">INÍCIO</a>
-                        </li>
-                        <li>
-                            <a href="./sobre.html">SOBRE</a>
-                        </li>
-                        <li>
-                            <a href="./formacao.html">FORMAÇÃO</a>
-                        </li>
-                        <li>
-                            <a href="./experiencia.html">EXPERIÊNCIA</a>
-                        </li>
-                        <li>
-                            <a href="./contatos.html">CONTATOS</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="content">
-                    <p>Olá !</p>
-                    <h1>Eu sou Sérgio Saraiva</h1>
-                    <h2>DESENVOLVEDOR FRONT END</h2>
-                    <p>Tecnólogo em Redes de Computadores. Bacharel em Engenharia de Sowftware e Engenheiro Front End.</p>
+    <header class="sticky-top">
+        <div class="container-formacao">
+            <nav class="cabecalho-formacao">
+                <div class="logo">PROJETOS</div>
+                <ul>
+                    <li>
+                        <a href="./inicio.html">INÍCIO</a>
+                    </li>
+                    <li>
+                        <a href="./sobre.html">SOBRE</a>
+                    </li>
+                    <li>
+                        <a href="./formacao.html">FORMAÇÃO</a>
+                    </li>
+                    <li>
+                        <a href="./experiencia.html">EXPERIÊNCIA</a>
+                    </li>
+                    <li>
+                        <a href="./contatos.html">CONTATOS</a>
+                    </li>
+                </ul>
+                <!-- Botões para mudar o background -->
+                <div class="background-buttons">
+                    <button id="bg1"></button>
+                    <button id="bg2"></button>
+                    <button id="bg3"></button>
                 </div>
-                <footer>
-                    <a href="#" class="portfolio-btn">PORTOFÓLIO 2024</a>
-                    <div><!-- Placeholder for potential additional footer content --></div>
-                </footer>
-            </div>
-            <div class="right-content">
-                <!-- <div class="overlay">
-                    <img src="/images/myimagshadw.png" alt="minha foto">
-                </div> -->
-            </div>
-        </div>
-            </div>
+            </nav>
         </div>
     </header>
+    <div class="container-education">
+        <div class="left-education">
+            <div class="cont animate__animated animate__zoomIn">
+                <img src="./images/graduation-cap-solid.svg">
+                <h1>Projetos Acadêmicos</h1>
+            </div>
+            
+        </div>
+        <div class="right-education">
+            <div class="cont animate__animated animate__zoomIn">
+                <img src="./images/desktop-solid.svg">
+                <h1>Projetos Pessoais</h1>
+            </div>
+            
+        </div>
+    </div>
+    <!-- <footer class="btn-portfolio animate__animated animate__pulse animate__infinite">
+        <a href="#" class="portfolio-btn">PORTOFÓLIO 2024</a>
+    </footer> -->
+    <script>
+        
+    </script>
+    <script src="./background.js"></script>
 </body>
 </html>
