@@ -4,7 +4,7 @@ function typeText(elementId, text, speed, sound) {
     const audio = new Audio(sound); // Carrega o som de digitação
 
     // Toca o som de forma contínua
-    audio.loop = true; // Ativa o loop para o som tocar continuamente
+    audio.loop = false; // Ativa o loop para o som tocar continuamente
     audio.play().catch((error) => {
         console.error("Erro ao reproduzir o som:", error);
     });
